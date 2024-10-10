@@ -1,0 +1,56 @@
+{
+  "name": "@jafit/taro-base-component",
+  "version": "1.0.0",
+  "description": "基于 taro 实现的多功能 Page 组件基类",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run prod",
+    "prod": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
+  },
+  "author": "jh8w8m",
+  "license": "MIT",
+  "directories": {
+    "test": "test",
+    "src": "src",
+    "dist": "dist"
+  },
+  "engines": {
+    "node": ">= 16.17.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "tarojs",
+    "react",
+    "components",
+    "miniapp"
+  ],
+  "devDependencies": {
+    "@tarojs/components": "^3.6.0",
+    "@tarojs/taro": "^3.6.0",
+    "@types/node": "^16.17.0",
+    "@types/react": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "react": "^18.2.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "@tarojs/components": "^3.6.0",
+    "@tarojs/taro": "^3.6.0"
+  }
+}

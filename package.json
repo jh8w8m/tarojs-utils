@@ -1,49 +1,15 @@
 {
-  "name": "tarojs-utils",
+  "name": "@jafit/tarojs-utils",
   "version": "1.0.0",
-  "description": "基于 taro + react 封装的工具集",
-  "main": "./dist/index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "prod": "pnpm run build",
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
+    "build:all": "pnpm recursive run build",
+    "install:all": "pnpm recursive install"
   },
-  "engines": {
-    "node": ">= 16.17.0"
-  },
-  "files": [
-    "lib",
-    "README.md"
-  ],
-  "keywords": [
-    "tarojs",
-    "react",
-    "components",
-    "miniapp"
-  ],
+  "private": true,
+  "description": "基于 taro + react 封装的工具集",
   "author": "jh8w8m",
-  "license": "MIT",
-  "devDependencies": {
-    "typescript": "^5.5.4",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "react": "^18.2.0",
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.2.0",
-    "eslint": "^8.57.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "@tarojs/components": "^3.6.0",
-    "@tarojs/taro": "^3.6.0"
-  },
-  "peerDependencies": {
-    "@tarojs/components": "^3.6.0",
-    "@tarojs/taro": "^3.6.0"
-  }
+  "license": "MIT"
 }

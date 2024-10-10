@@ -1,0 +1,3 @@
+packages:
+  - 'packages/taro-base-component'
+  - 'packages/taro-plugin-indie'
