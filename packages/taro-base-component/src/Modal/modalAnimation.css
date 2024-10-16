@@ -1,0 +1,33 @@
+.taro-modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9000;
+}
+
+.taro-modal-fadeIn {
+    transition: opacity 300ms ease-in-out;
+    opacity: 1;
+}
+
+.taro-modal-fadeOut {
+    transition: opacity 300ms ease-in-out;
+    opacity: 0;
+}
+
+.taro-modal-slideIn {
+    transition: transform 600ms ease-in-out;
+    transform: translateY(0%);
+}
+
+.taro-modal-slideOut {
+    transition: transform 600ms ease-in-out;
+    transform: translateY(100%);
+}
+
+.taro-modal-hidden {
+    transform: translateY(100%);
+    opacity: 0;
+}

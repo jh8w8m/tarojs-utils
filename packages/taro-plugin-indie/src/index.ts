@@ -5,6 +5,7 @@ import { IPluginOptions } from './index.d'
 
 const path = require('path')
 const wxssReg = /.*\.wxss$/
+const acssReg = /.*\.acss$/
 
 const defaultPathRule = (filename: string) => {
     return filename.startsWith('pages')
@@ -16,15 +17,16 @@ export default (ctx, options: IPluginOptions = {}) => {
 
         Object.keys(assets).forEach(filename => {
             const isWxss = wxssReg.test(filename)
+            const isAcss = acssReg.test(filename)
             const { pathStyleImportWithCustomRule } = options
 
             const pathRule = pathStyleImportWithCustomRule || defaultPathRule
             const isPathStyle = pathRule(filename)
 
-            if (isWxss && isPathStyle) {
+            if ((isWxss || isAcss) && isPathStyle) {
                 const source = new ConcatSource()
                 const originSource = assets[filename].source()
-                const relativePath = JSON.stringify(promoteRelativePath(path.relative(filename, 'app.wxss')))
+                const relativePath = JSON.stringify(promoteRelativePath(path.relative(filename, isWxss ? 'app.wxss' : 'app.acss')))
 
                 source.add(`@import ${relativePath};`)
                 source.add('\n')

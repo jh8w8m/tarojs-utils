@@ -1,0 +1,62 @@
+.taro-page-alert-container {
+    width: 220px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.taro-page-alert-title {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.taro-page-alert-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2px 0;
+}
+
+.taro-page-alert-message {
+    margin: 10px 10px 14px 10px;
+    max-height: 268px;
+    line-height: 20px;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.taro-page-alert-button-item {
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1PX solid #ccc;
+    border-radius: 0;
+}
+
+.taro-page-alert-button-item-default {
+    color: #000;
+}
+
+.taro-page-alert-button-item-cancel {
+    color: red;
+}
+
+.taro-page-alert-button-item-destructive {
+    color: #000;
+    font-weight: bolder;
+}
+

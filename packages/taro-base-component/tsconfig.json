@@ -6,7 +6,7 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "lib": ["ESNEXT"],
+    "lib": ["dom","ESNEXT"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
